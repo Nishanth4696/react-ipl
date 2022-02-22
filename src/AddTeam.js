@@ -20,14 +20,14 @@ const formValidaionSchema= yup.object({
 export function AddTeam() {
 
  
-  const [name, setName] = useState("");
-  const [poster, setPoster] = useState("");
-  const [summary, setSummary] = useState(""); 
-  const [brief, setBrief] = useState(""); 
-  const [History, setHistory] = useState("");
-  const [player, setPlayer] = useState("");
-  const [homeground, setHomeground] = useState("");
-  const [trailer, setTrailer] = useState("");
+  const [name] = useState("");
+  const [poster] = useState("");
+  const [summary] = useState(""); 
+  const [brief] = useState(""); 
+  const [History] = useState("");
+  const [player] = useState("");
+  const [homeground] = useState("");
+  const [trailer] = useState("");
  
  
   const history = useHistory();
