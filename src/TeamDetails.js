@@ -12,7 +12,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
     fetch(`https://620f1911ec8b2ee283336fc9.mockapi.io/IPL/${id}`,{method:"GET"})
     .then((data) => data.json())
     .then((mv) => setTeam(mv))
-  },[])
+  },[id])
  
 
   // const movie = Movies[id];
