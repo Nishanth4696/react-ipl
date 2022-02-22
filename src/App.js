@@ -1,10 +1,6 @@
 import './App.css';
 import { useState} from 'react';
-
-
 import React from "react";
-
-
 import { Welcome } from './Welcome';
 import { AddTeam } from './AddTeam';
 import {NotFound} from './NotFound'
@@ -59,35 +55,33 @@ export default function App() {
         </AppBar>
         
           <Switch>
-            <Route path="/ipl">
+            <Route exact path="/ipl">
               <Redirect to='/iplteams' />
             </Route>
 
            
 
-            <Route path="/iplteams/edit/:id">
+            <Route exact path="/iplteams/edit/:id">
               <EditTeam  />
             </Route>
 
-            <Route path="/iplteams/:id">
+            <Route exact path="/iplteams/:id">
               <TeamDetails />
             </Route>
 
-          
-
-            <Route path="/iplteams">
+            <Route exact path="/iplteams">
               <TeamList  /> 
             </Route>
 
-            <Route path="/addteam">
+            <Route exact path="/addteam">
                 <AddTeam />
             </Route>
 
-            <Route path="/home">
+            <Route exact path="/home">
                 <Welcome />
             </Route>
 
-            <Route path="/">
+            <Route exact path="/">
                 <LoginApp />
             </Route>
 

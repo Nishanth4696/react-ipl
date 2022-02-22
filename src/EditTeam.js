@@ -1,7 +1,13 @@
 import { useState, useEffect } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+
 import { useHistory, useParams } from 'react-router-dom';
+
+
+
+
+
 
 export function EditTeam() {
     const { id } = useParams();
@@ -13,7 +19,7 @@ export function EditTeam() {
       .then((data) => data.json())
       .then((mv) => setTeam(mv))
       
-    },[])
+    },[id])
 
     console.log(team)
    
@@ -32,7 +38,7 @@ function UpdateTeam({ team }){
   const [player, setPlayer] = useState(team.player);
   const [homeground, setHomeground] = useState(team.homeground);
   const [trailer, setTrailer] = useState(team.trailer);
-  const [id, setId] = useState(team.id);
+ 
   
   const history = useHistory();
   const editTeam = () => {
@@ -47,7 +53,7 @@ function UpdateTeam({ team }){
       player,
       homeground,
       trailer,
-      id
+      
     };
     
     fetch(`https://620f1911ec8b2ee283336fc9.mockapi.io/IPL/${team.id}`,
@@ -61,6 +67,9 @@ function UpdateTeam({ team }){
 
   
   };
+
+
+ 
 
   return (
 
@@ -126,12 +135,7 @@ function UpdateTeam({ team }){
         id="standard-basic"
         variant="standard" />
 
-<TextField
-        value={id}
-        onChange={(event) => setId(event.target.value)}
-        label='Enter the id'
-        id="standard-basic"
-        variant="standard" />
+
 
 
       <Button onClick={editTeam}  variant="outlined" >Save</Button>

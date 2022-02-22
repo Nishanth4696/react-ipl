@@ -14,7 +14,7 @@ import Card from '@mui/material/Card';
 
 export default function IplTeams({name, rating, summary, poster,trailer, id, deleteButton, editButton}){
     const [show, setShow] = useState(false);
-const styles = rating > 8 ? {color : 'teal', fontWeight: 'bold'} : {color : 'crimson', fontWeight: 'bold'};
+
 const history = useHistory();
 
 const summarystyles = { display :show ? 'block' : 'none'} 

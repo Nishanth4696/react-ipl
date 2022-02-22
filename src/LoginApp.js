@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import React from "react";
-
+import Button from '@mui/material/Button';
 import App from './App';
 import { useHistory } from 'react-router-dom';
 
@@ -67,7 +67,7 @@ export function LoginApp() {
           {renderErrorMessage("pass")}
         </div>
         <div className="button-container">
-          <input type="submit" onClick={history.push('./home')}/>
+          <Button  variant="outlined" type='submit' onClick={() => history.push('./home')} >Submit</Button>
         </div>
       </form>
     </div>
