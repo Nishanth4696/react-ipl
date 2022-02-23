@@ -1,4 +1,4 @@
-# netify url
+# Netify url
 https://react-ipl.netlify.app
 
 # Getting Started with Create React App
